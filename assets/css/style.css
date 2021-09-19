@@ -49,6 +49,6 @@ a {
   color: #fff;
 }
 
-.active {
+.nav__link.active {
   background-color: #004AF2;
 }
