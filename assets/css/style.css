@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 15px;
   line-height: 1.5;
   color: #585858;
@@ -8,6 +8,22 @@ body {
 
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 *,
@@ -20,12 +36,12 @@ a {
 .container {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 0 20px
+  padding: 0 20px;
 }
 
 /* Header */
 .header {
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
   left: 0;
   right: 0;
@@ -38,6 +54,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header__logo {
+  height: 25px;
 }
 
 /* Nav */
@@ -55,5 +75,103 @@ a {
 }
 
 .nav__link.active {
-  background-color: #004AF2;
+  background-color: #004af2;
+}
+
+/* Intro */
+.intro {
+  background: #000 url("../images/BG.jpg") no-repeat center / cover;
+}
+
+.intro__inner {
+  height: 600px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.intro__text {
+  margin-bottom: 45px;
+  color: #fff;
+  text-align: right;
+}
+
+.intro__title {
+  position: relative;
+  font-size: 110px;
+  font-weight: 700;
+  line-height: 0.9;
+  font-family: "Lato", sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.intro__title-amp {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 170px;
+  font-weight: 900;
+  font-family: "Lato", sans-serif;
+  color: rgba(255, 255, 255, 0.2);
+  user-select: none;
+}
+
+/* Request-form */
+.request-form {
+  width: 100%;
+  max-width: 400px;
+  background-color: #004af2;
+  color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.request-form__header {
+  padding: 20px 30px;
+  background-color: #033fc9;
+}
+
+.request-form__title {
+  margin-bottom: 8px;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: "Lato", sans-serif;
+}
+
+.request-form__text {
+  line-height: 1.4;
+}
+
+.request-form__content {
+  padding: 30px;
+}
+
+/* Form */
+.form__group {
+  margin-bottom: 25px;
+}
+
+.input {
+  width: 100%;
+  padding-bottom: 12px;
+  padding-left: 45px;
+  display: block;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, .25);
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+
+  transition: border-color .2s linear;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, .5);
+}
+
+.input:focus {
+  color: #fff;
+  outline: none;
+  border-bottom-color: #fff;
 }
