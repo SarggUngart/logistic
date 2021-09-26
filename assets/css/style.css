@@ -1,9 +1,16 @@
+:root {
+    --text-color: #585858;
+    --title-color: #2c2c2c;
+    --accent-color: #004AF2;
+    --white-color: #fff;
+}
+
 body {
     margin: 0;
     font-family: "PT Sans", sans-serif;
     font-size: 15px;
     line-height: 1.5;
-    color: #585858;
+    color: var(--text-color);
 }
 
 a {
@@ -54,7 +61,7 @@ ol {
     line-height: 1.2;
     font-weight: 900;
     font-size: 45px;
-    color: #2c2c2c;
+    color: var(--title-color);
 }
 
 .section--map {
@@ -62,7 +69,7 @@ ol {
 }
 
 .section__title span {
-    color: #004AF2;
+    color: var(--accent-color);
 }
 
 /* Header */
@@ -97,11 +104,11 @@ ol {
     display: flex;
     align-items: center;
     padding: 0 15px;
-    color: #fff;
+    color: var(--white-color);
 }
 
 .nav__link.active {
-    background-color: #004af2;
+    background-color: var(--accent-color);
 }
 
 /* Intro */
@@ -119,7 +126,7 @@ ol {
 
 .intro__text {
     margin-bottom: 45px;
-    color: #fff;
+    color: var(--white-color);
     text-align: right;
 }
 
@@ -148,8 +155,8 @@ ol {
 .request-form {
     width: 100%;
     max-width: 400px;
-    background-color: #004af2;
-    color: #fff;
+    background-color: var(--accent-color);
+    color: var(--white-color);
     border-radius: 5px;
     overflow: hidden;
 }
@@ -202,9 +209,9 @@ ol {
 }
 
 .input:focus {
-    color: #fff;
+    color: var(--white-color);
     outline: none;
-    border-bottom-color: #fff;
+    border-bottom-color: var(--white-color);
 }
 
 .input--user {
@@ -230,7 +237,7 @@ ol {
     font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 18px;
-    color: #fff;
+    color: var(--white-color);
     text-align: center;
     cursor: pointer;
 }
@@ -253,7 +260,7 @@ ol {
     display: flex;
     flex-wrap: wrap;
     padding: 30px 0 50px;
-    background-color: #fff;
+    background-color: var(--white-color);
     border-radius: 5px;
     filter: drop-shadow(0px 5px 30px rgba(0, 0, 0, 0.1));
     position: relative;
@@ -291,13 +298,13 @@ ol {
 
 .services__text {
     margin-bottom: 20px;
-    color: #585858;
+    color: var(--text-color);
     line-height: 1.4;
 }
 
 .servicse__link {
     margin-top: auto;
-    color: #004AF2;
+    color: var(--accent-color);
     position: relative;
     transition: color .1s linear;
 }
@@ -311,7 +318,7 @@ ol {
     display: block;
     width: 10px;
     height: 2px;
-    background-color: #004AF2;
+    background-color: var(--accent-color);
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -328,7 +335,7 @@ ol {
 /* Clients */
 .clients {
     display: flex;
-    margin: 60px 0 130px;
+    margin: 60px 0 80px;
 }
 
 .clients__logo {
@@ -391,7 +398,7 @@ ol {
 }
 
 .reviews__header-avatar {
-    border: 2px solid #FFFFFF;
+    border: 2px solid var(--white-color);
     border-radius: 50px;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
 }
@@ -404,13 +411,13 @@ ol {
 }
 
 .reviews__header-name {
-    color: #2C2C2C;
+    color: var(--title-color);
     font-size: 18px;
     font-weight: 900;
 }
 
 .reviews__header-position {
-    color: #2C2C2C;
+    color: var(--title-color);
     font-size: 15px;
 }
 
@@ -422,6 +429,66 @@ ol {
     margin-bottom: 20px;
 }
 
-.reviews__content p:first-child{
-text-indent: 20px;
+.reviews__content p:first-child {
+    text-indent: 20px;
+}
+
+/* Benefits */
+.benefits {
+    display: flex;
+}
+
+.benefits_col {
+    width: 50%;
+}
+
+.benefits__photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.benefits__list {
+    width: 100%;
+    max-width: 370px;
+    padding-left: 50px;
+    background-image: linear-gradient(to bottom, var(--white-color) 40%, #a5a5a5 40%);
+    background-size: 2px 35px;
+    background-repeat: repeat-y;
+    background-position: left 12px top;
+    position: relative;
+}
+
+.benefits__list:before{
+    content: "";
+    display: block;
+    width: 26px;
+    height: 36px;
+    background: url(../images/Grey.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.benefits__list:after{
+    content: "";
+    display: block;
+    width: 26px;
+    height: 36px;
+    background: url(../images/Green.svg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.benefits__item:not(:last-child) {
+    margin-bottom: 35px;
+}
+
+.benefits__title {
+    margin-bottom: 12px;
+    line-height: 1.2;
+    font-family: 'lato', sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+    color: var(--title-color);
 }
