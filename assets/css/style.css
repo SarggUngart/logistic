@@ -72,6 +72,10 @@ ol {
     color: var(--accent-color);
 }
 
+.section--grey {
+    background-color: #F9F9F9;
+}
+
 /* Header */
 .header {
     background-color: rgba(0, 0, 0, 0.2);
@@ -253,6 +257,11 @@ ol {
 
 .btn--orange:hover {
     background: linear-gradient(90deg, rgb(255 107 0), rgb(255 0 0) 100%);
+}
+
+.btn--center {
+    margin: 0 auto;
+    display: block;
 }
 
 /* Services */
@@ -543,4 +552,43 @@ ol {
 
 .team__phone {
     background: url(../images/phone_team.svg) left top -1px no-repeat;
+}
+
+/* Mission */
+.mission {
+    font-family: 'Lato', sans-serif;
+    padding: 60px 30px;
+    margin: -25px 0 30px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    text-align: center;
+    background-image: linear-gradient(to right, var(--accent-color) 50%, #FC2C2B 50%);
+    background-size: 83.3333% 2px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: var(--white-color);
+    position: relative;
+}
+
+.mission-maintitle {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 90px;
+    color: rgba(0, 0, 0, 0.05);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+}
+
+.mission__title {
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: capitalize;
+    color: var(--accent-color);
+}
+
+.mission__subtitle {
+    font-weight: 400;
+    font-size: 21px;
+    text-transform: capitalize;
 }
