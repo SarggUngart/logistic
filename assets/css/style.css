@@ -649,6 +649,7 @@ ol {
 
 /* Footer */
 .footer {
+    margin-top: 60px;
     padding: 40px 0;
     background-color: #F9F9F9;
     background-image: url(../images/footer_track_left.png), url(../images/footer_track-right.png);
