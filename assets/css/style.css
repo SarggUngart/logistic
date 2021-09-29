@@ -17,6 +17,12 @@ body.no-scroll {
     overflow: hidden;
 }
 
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -60,6 +66,10 @@ ol {
     padding: 60px 0;
 }
 
+.section--last {
+    margin-bottom: 60px;
+}
+
 .section__title {
     margin-bottom: 40px;
     font-family: 'Lato', sans-serif;
@@ -91,6 +101,10 @@ ol {
     z-index: 1000;
 }
 
+.header--dark {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 .header__inner {
     height: 85px;
     display: flex;
@@ -116,6 +130,10 @@ ol {
     color: var(--white-color);
 }
 
+.nav__link:not(.active):hover {
+    text-decoration: underline;
+}
+
 .nav__link.active {
     background-color: var(--accent-color);
 }
@@ -123,6 +141,18 @@ ol {
 /* Intro */
 .intro {
     background: #000 url("../images/BG.jpg") no-repeat center / cover;
+    margin-bottom: 30px;
+}
+
+.intro--blog {
+    height: 350px;
+    background: #000 url(../images/Blog_bg.jpg) no-repeat center / cover;
+    margin-bottom: 30px;
+}
+
+.intro--text {
+    height: 350px;
+    background: #000 url(../images/text_bg.jpg) no-repeat center / cover;
     margin-bottom: 30px;
 }
 
@@ -173,6 +203,10 @@ ol {
 .request-form--intro {
     position: relative;
     bottom: -30px;
+}
+
+.request-form--right {
+    margin-left: auto;
 }
 
 .request-form__header {
@@ -652,6 +686,18 @@ ol {
     justify-content: space-between;
 }
 
+.news-blog {
+    flex-direction: column;
+}
+
+.news-blog .news__item {
+    max-width: none;
+}
+
+.news-blog .news__item:not(:last-child) {
+    margin-bottom: 45px;
+}
+
 .news__item {
     width: 100%;
     max-width: 500px;
@@ -679,7 +725,7 @@ ol {
 
 /* Footer */
 .footer {
-    margin-top: 60px;
+    margin-top: auto;
     padding: 40px 0;
     background-color: #F9F9F9;
     background-image: url(../images/footer_track_left.png), url(../images/footer_track-right.png);
@@ -737,7 +783,7 @@ ol {
     z-index: 2000;
 }
 
-.modal.show{
+.modal.show {
     display: flex;
 }
 
@@ -808,4 +854,45 @@ ol {
 
 .modal__contacts a:hover {
     text-decoration: underline;
+}
+
+/* Main */
+.main {
+    display: flex;
+}
+
+.main__col {
+    width: 50%;
+}
+
+/* Text */
+.text {
+    max-width: 890px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.text h4 {
+    margin-bottom: 40px;
+    color: var(--title-color);
+    font-size: 24px;
+}
+
+.text p {
+    margin: 40px 0;
+}
+
+.text ul {
+    margin-bottom: 40px;
+}
+
+.text ol {
+    margin-bottom: 60px;
+}
+
+
+.text img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
