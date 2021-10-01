@@ -946,6 +946,10 @@ ol {
         font-size: 120px;
     }
 
+    .intro--blog {
+        height: 250px;
+    }
+
     /* Services */
     .services__item {
         width: 50%;
@@ -1192,6 +1196,11 @@ ol {
         padding: 0 15px;
     }
 
+    /* Misson */
+    .mission__title {
+        margin-bottom: 10px;
+    }
+
     .clients__img {
         margin: 0 auto;
     }
@@ -1213,56 +1222,63 @@ ol {
         margin-bottom: 0;
     }
 
-    @media (max-width:320px) {
+    /* Blog */
+    .news-blog .news__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
 
-        /* Form */
-        .request-form__header {
-            padding: 10px 20px;
-        }
+@media (max-width:320px) {
 
-        .request-form__content {
-            padding: 20px;
-        }
+    /* Form */
+    .request-form__header {
+        padding: 10px 20px;
+    }
 
-        .request-form__title {
-            font-size: 25px;
-        }
+    .request-form__content {
+        padding: 20px;
+    }
 
-        /* Mission */
-        .mission-maintitle {
-            font-size: 42px;
-        }
+    .request-form__title {
+        font-size: 25px;
+    }
 
-        .mission {
-            margin: -20px 0 30px;
-            padding: 30px 20px;
-            margin-top: -10px;
-        }
+    /* Mission */
+    .mission-maintitle {
+        font-size: 42px;
+    }
 
-        .mission__title {
-            font-size: 20px;
-        }
+    .mission {
+        margin: -20px 0 30px;
+        padding: 30px 20px;
+        margin-top: -10px;
+    }
 
-        .mission__subtitle {
-            font-size: 16px;
-        }
+    .mission__title {
+        font-size: 20px;
+    }
 
-        /* Footer */
-        .footer {
-            background-size: 180px auto;
-            background-position: left -50px bottom, right -50px bottom;
-        }
+    .mission__subtitle {
+        font-size: 16px;
+    }
 
-        /* Modal */
-        .modal {
-            padding: 50px 2px;
-        }
+    /* Footer */
+    .footer {
+        background-size: 180px auto;
+        background-position: left -50px bottom, right -50px bottom;
+    }
 
-        .modal__inner {
-            padding: 5px;
-        }
+    /* Modal */
+    .modal {
+        padding: 50px 2px;
+    }
 
-        .modal__footer {
-            margin-top: 5px;
-            padding-top: 0;
-        }
+    .modal__inner {
+        padding: 5px;
+    }
+
+    .modal__footer {
+        margin-top: 5px;
+        padding-top: 0;
+    }
+}
