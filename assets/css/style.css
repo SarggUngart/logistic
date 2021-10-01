@@ -8,9 +8,11 @@
 body {
     margin: 0;
     font-family: "PT Sans", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.5;
     color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body.no-scroll {
@@ -120,7 +122,7 @@ ol {
 .nav {
     display: flex;
     height: 100%;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .nav__link {
@@ -520,7 +522,7 @@ ol {
 
 .reviews__header-position {
     color: var(--title-color);
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .reviews__content {
@@ -603,7 +605,7 @@ ol {
 }
 
 .team__item {
-    width: 30%;
+    max-width: 30%;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -690,8 +692,8 @@ ol {
 .news {
     margin-bottom: 50px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 -15px 30px;
 }
 
 .news-blog {
@@ -709,6 +711,7 @@ ol {
 .news__item {
     width: 100%;
     max-width: 500px;
+    padding: 0 15px;
 }
 
 .news__text {
@@ -783,8 +786,10 @@ ol {
     width: 100%;
     height: 100%;
     display: none;
+    padding: 35px 0;
+    overflow: auto;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     position: fixed;
     top: 0;
     background-color: rgba(0, 0, 0, .9);
@@ -796,8 +801,10 @@ ol {
 }
 
 .modal__inner {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     padding: 25px;
+    margin: auto;
     background-color: var(--white-color);
     position: relative;
 }
@@ -852,6 +859,7 @@ ol {
 }
 
 .modal__contacts {
+    font-size: 14px;
     color: inherit;
     font-style: normal;
 }
@@ -912,9 +920,30 @@ ol {
         text-align: center;
     }
 
-    .section--map{
+    .section--map {
         background-position: top 130px center;
-}
+    }
+
+    .section--last {
+        margin-bottom: 0;
+    }
+
+    /* Intro */
+    .intro__title {
+        font-size: 90px;
+        text-align: right;
+    }
+
+    .intro__suptitle {
+        text-align: right;
+    }
+
+    .intro__text {
+        text-align: center;
+    }
+
+    .intro__title-amp {
+        font-size: 120px;
     }
 
     /* Services */
@@ -950,6 +979,24 @@ ol {
         max-width: 100%;
         height: auto;
     }
+
+    /* Footer */
+    .footer {
+        background-size: 350px auto;
+    }
+
+    /* Main */
+    .main {
+        flex-direction: column;
+    }
+
+    .main__col {
+        width: 100%;
+    }
+
+    .request-form--right {
+        margin: 50px auto 0;
+    }
 }
 
 @media (max-width:767px) {
@@ -957,6 +1004,18 @@ ol {
     /* Intro */
     .intro {
         margin-bottom: 0;
+    }
+
+    .intro__inner {
+        padding: 60px 0 25px;
+    }
+
+    .intro__title {
+        font-size: 70px;
+    }
+
+    .intro__title-amp {
+        font-size: 100px;
     }
 
     /* Header */
@@ -1008,26 +1067,76 @@ ol {
         align-items: center;
     }
 
-    .intro__title {
-        font-size: 90px;
-        text-align: right;
-    }
-
-    .intro__suptitle {
-        text-align: right;
-    }
-
-    .intro__text {
-        text-align: center;
-    }
-
-    .intro__title-amp {
-        font-size: 120px;
-    }
-
     /* Form */
     .request-form {
         position: static;
+    }
+
+    /* Benefits */
+    .benefits {
+        max-width: 600px;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .benefits_col {
+        width: 100%;
+    }
+
+    .benefits__list {
+        margin-bottom: 30px;
+        max-width: none;
+    }
+
+    /* Team */
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team__item {
+        max-width: 300px;
+        margin: 0 auto 30px;
+    }
+
+    .team__item:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Mission */
+    .mission-maintitle {
+        font-size: 70px;
+    }
+
+    .mission {
+        margin: -20px 0 30px;
+        padding: 40px 20px;
+        margin-top: -16px;
+    }
+
+    .mission__title {
+        font-size: 24px;
+    }
+
+    .mission__subtitle {
+        font-size: 18px;
+    }
+
+    /* News */
+    .news {
+        flex-wrap: wrap;
+        margin: 0 -15px 15px;
+    }
+
+    .news__item {
+        max-width: none;
+        padding: 0 15px 30px;
+    }
+
+    /* Footer */
+    .footer {
+        background-size: 300px auto;
+        background-position: left -30px bottom, right -30px bottom;
     }
 }
 
@@ -1038,6 +1147,15 @@ ol {
 
     .intro__title-amp {
         font-size: 90px;
+    }
+
+    .intro__text {
+        margin-bottom: 30px;
+    }
+
+    /* Request */
+    .request-form__content {
+        padding: 20px;
     }
 
     /* Services */
@@ -1052,6 +1170,10 @@ ol {
     /* Section */
     .section {
         padding: 30px 0;
+    }
+
+    .section--last {
+        margin-bottom: 30px;
     }
 
     .section__title {
@@ -1073,4 +1195,74 @@ ol {
     .clients__img {
         margin: 0 auto;
     }
-}
+
+    /* Footer */
+    .footer {
+        background-size: 200px auto;
+        background-position: left -50px bottom, right -50px bottom;
+    }
+
+    /* Modal */
+    .modal__close {
+        top: -30px;
+        right: 0px;
+    }
+
+    /* Request-form */
+    .news__item {
+        margin-bottom: 0;
+    }
+
+    @media (max-width:320px) {
+
+        /* Form */
+        .request-form__header {
+            padding: 10px 20px;
+        }
+
+        .request-form__content {
+            padding: 20px;
+        }
+
+        .request-form__title {
+            font-size: 25px;
+        }
+
+        /* Mission */
+        .mission-maintitle {
+            font-size: 42px;
+        }
+
+        .mission {
+            margin: -20px 0 30px;
+            padding: 30px 20px;
+            margin-top: -10px;
+        }
+
+        .mission__title {
+            font-size: 20px;
+        }
+
+        .mission__subtitle {
+            font-size: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            background-size: 180px auto;
+            background-position: left -50px bottom, right -50px bottom;
+        }
+
+        /* Modal */
+        .modal {
+            padding: 50px 2px;
+        }
+
+        .modal__inner {
+            padding: 5px;
+        }
+
+        .modal__footer {
+            margin-top: 5px;
+            padding-top: 0;
+        }
