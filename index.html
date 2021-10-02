@@ -15,28 +15,28 @@
 <body>
     <div class="page">
         <!-- Header -->
-        <header class="header header--dark">
+        <header class="header" id="header">
             <div class="container">
                 <div class="header__inner">
                     <a class="header__logo" href="./index.html"><img class="header__img" src="assets/images/logo.svg" alt="logistic"></a>
-                    <nav class="nav">
-                        <a href="#" class="nav__link active">Services</a>
-                        <a href="#" class="nav__link">Clients</a>
-                        <a href="#" class="nav__link">Benefits</a>
-                        <a href="#" class="nav__link">Team</a>
-                        <a href="#" class="nav__link">News</a>
+                    <nav class="nav" id="nav">
+                        <a href="#" class="nav__link" data-scroll="#services">Services</a>
+                        <a href="#" class="nav__link" data-scroll="#clients">Clients</a>
+                        <a href="#" class="nav__link" data-scroll="#benefits">Benefits</a>
+                        <a href="#" class="nav__link" data-scroll="#team">Team</a>
+                        <a href="#" class="nav__link" data-scroll="#news">News</a>
                         <a href="#" class="nav__link">Contact Us</a>
                     </nav>
                     <button class="burger" type="button">
-                         <img class="burger__icon" src="assets/images/burger.svg" alt="burger" >
-                     </button>
+                        <img class="burger__icon" src="assets/images/burger.svg" alt="burger">
+                    </button>
                 </div>
             </div>
         </header>
         <!-- ./Header -->
 
         <!-- Intro -->
-        <div class="intro">
+        <div class="intro" id="intro" data-scroll="#intro">
             <div class="container">
                 <div class="intro__inner">
                     <!-- Request-form -->
@@ -78,7 +78,7 @@
         <!-- ./Intro -->
 
         <!-- Services -->
-        <section class="section">
+        <section class="section" id="services">
             <div class="container">
                 <div class="services">
                     <h2 class="services__title-main">Services</h2>
@@ -116,7 +116,7 @@
         <!-- ./Services -->
 
         <!-- Clients -->
-        <section class="section section--map">
+        <section class="section section--map" id="clients">
             <div class="container">
                 <h2 class="section__title"><span>Our</span> clients</h2>
                 <div class="clients">
@@ -161,7 +161,7 @@
         <!-- ./Clients -->
 
         <!-- Benefits -->
-        <div class="section">
+        <div class="section" id="benefits">
             <div class="container">
                 <div class="benefits">
                     <div class="benefits_col">
@@ -200,7 +200,7 @@
         <!-- ./Benefits -->
 
         <!-- Team -->
-        <section class="section section--grey">
+        <section class="section section--grey" id="team">
             <div class="container">
                 <h2 class="section__title"><span>Our</span> Team</h2>
                 <div class="team">
@@ -247,10 +247,10 @@
         <!-- ./Mission -->
 
         <!-- News -->
-        <section class="section section--last">
+        <section class="section section--last" id="news">
             <div class="container">
                 <h2 class="section__title"><span>Interesting</span> to read</h2>
-                <div class="news">
+                <div class="news" >
                     <article class="news__item">
                         <h3 class="news__title"><a href="#">News title</a></h3>
                         <div class="news__text">
@@ -292,7 +292,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal" id="becomeClientModal" >
+    <div class="modal" id="becomeClientModal">
         <div class="modal__inner">
             <div class="modal__header">
                 <h4 class="modal__title">Need to deliver your cargo?
@@ -353,7 +353,9 @@
     </div>
     <!-- .Thanks_modal -->
 
-
+    <!-- JavaScrupt -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="./js/app.js"></script>
 
 </body>
 
