@@ -4,6 +4,7 @@ $(function() {
     let header = $("#header");
     let introH = intro.innerHeight();
     let headerH = header.innerHeight();
+    let scrollTop = $(window).scrollTop();
 
 
     /* Header class on scroll
@@ -28,8 +29,6 @@ $(function() {
         }
     }
 
-
-
     /* Smooth Scroll to sections
     =====================================*/
 
@@ -46,7 +45,29 @@ $(function() {
 
     /* ScrollSpy
     =====================================*/
+    let windowH = $(window).height();
+    scrollspy(scrollTop);
 
+    $(window).on('scroll', function() {
+        scrollTop = $(this).scrollTop();
 
+        scrollspy(scrollTop);
+    });
 
+    function scrollspy(scrollTop) {
+        $('[data-scrollspy]').each(function() {
+            let $this = $(this);
+            let sectionId = $this.data('scrollspy');
+            let sectionOffset = $this.offset().top;
+            sectionOffset = sectionOffset - (windowH * 0.3);
+
+            if (scrollTop >= sectionOffset) {
+                $('#nav [data-scroll]').removeClass('active');
+                $('#nav [data-scroll="' + sectionId + '"]').addClass('active');
+            }
+            if (scrollTop == 0) {
+                $('#nav [data-scroll]').removeClass('active');
+            }
+        });
+    }
 });
