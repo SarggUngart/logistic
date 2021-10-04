@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +38,13 @@
 
         <!-- Intro -->
         <div class="intro" id="intro">
+            <div class="intro__slider" id="introSlider">
+
+                <img class="intro__slider-photo" src="./assets/images/BG.jpg" alt="">
+                <img class="intro__slider-photo" src="./assets/images/BG.jpg" alt="">
+                <img class="intro__slider-photo" src="./assets/images/BG.jpg" alt="">
+
+            </div>
             <div class="container">
                 <div class="intro__inner">
                     <!-- Request-form -->
@@ -71,6 +79,11 @@
                             <span class="intro__title-amp">&amp;</span>
                             Trans<br>Logistic
                         </h1>
+                    </div>
+
+                    <div class="intro__slider-arrows">
+                        <button class="intro__slider-btn intro__slider-btn-prev" type="button" id="introSliderPrev">prev</button>
+                        <button class="intro__slider-btn intro__slider-btn-next" type="button" id="introSliderNext">next</button>
                     </div>
                 </div>
             </div>
@@ -355,6 +368,7 @@
 
     <!-- JavaScrupt -->
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="./js/slick.min.js"></script>
     <script src="./js/app.js"></script>
 
 </body>
