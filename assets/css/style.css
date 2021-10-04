@@ -535,25 +535,84 @@ ol {
 }
 
 /* Reviews */
-.reviews {
-    position: relative;
+.reviews:after,
+.reviews:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+
+.reviews:before {
+    left: 0;
+    background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
 }
 
 .reviews:after {
-    content: "";
-    width: 91px;
-    height: 124px;
-    background: url("../images/lines.svg");
+    right: 0;
+    background-image: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+}
+
+.reviews .slick-list {
+    padding-top: 20px;
+}
+
+.reviews .slick-dots {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     position: absolute;
-    top: -10px;
-    left: 5px;
-    z-index: -1;
+    bottom: -30px;
+    left: 0;
+    z-index: 3;
+}
+
+.reviews .slick-dots li {
+    margin: 0 7px;
+}
+
+.reviews .slick-dots li.slick-active button {
+    background: #004af2;
+    box-shadow: 0 0 0 5px rgba(0, 74, 242, .11);
+}
+
+.reviews .slick-dots button {
+    width: 10px;
+    height: 10px;
+    display: block;
+    padding: 0;
+    background: #dbdbdb;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: transparent;
+    font-size: 0;
+    transition: background .2s linear, box-shadow .2s linear;
+}
+
+.reviews__item {
+    padding: 0px 10px;
 }
 
 .reviews__header {
     display: flex;
     margin-bottom: 30px;
     font-family: 'lato', sans-serif;
+    position: relative;
+}
+
+.reviews__header:after {
+    content: "";
+    width: 91px;
+    height: 124px;
+    background: url("../images/lines.svg");
+    position: absolute;
+    top: -3px;
+    left: 10px;
+    z-index: -1;
 }
 
 .reviews__header-avatar {
